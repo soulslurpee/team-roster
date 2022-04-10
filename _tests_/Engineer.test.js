@@ -2,6 +2,7 @@ const Engineer = require('../lib/Engineer.js');
 const { TestWatcher } = require('jest');
 
 test('checks for Engineer title', () =>{
+
   const engineer = new Engineer('Dave', '2', 'Engineer', 'dave@company.com', 'username');
 
   expect(engineer.name).toBe('Dave');
@@ -9,4 +10,13 @@ test('checks for Engineer title', () =>{
   expect(engineer.title).toBe('Engineer');
   expect(engineer.email).toBe('dave@company.com');
   expect(engineer.special).toBe('username');
+});
+
+test('creates bio array object', () => {
+
+  const engineer = new Engineer('Dave', '2', 'Engineer', 'dave@company.com', 'username');
+
+  expect(engineer.getBio()).toEqual(expect.any(Object));
+
+  console.log(engineer.getBio());
 });
