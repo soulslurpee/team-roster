@@ -9,14 +9,14 @@ test('checks for intern title', () =>{
   expect(intern.id).toBe('2');
   expect(intern.title).toBe('Intern');
   expect(intern.email).toBe('dave@company.com');
-  expect(intern.special).toBe('school');
+  expect(intern.school).toBe('school');
 });
 
-test('creates bio array object', () => {
+test('creates school array object', () => {
 
   const intern = new Intern('Dave', '2', 'Intern', 'dave@company.com', 'school');
 
-  expect(intern.getBio()).toEqual(expect.any(Object));
+  expect(intern.getSchool()).toEqual(expect.any(Object));
 
-  console.log(intern.getBio());
+  console.log(intern.getSchool());
 });

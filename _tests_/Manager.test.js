@@ -9,10 +9,10 @@ test('checks for manager title', () =>{
   expect(manager.id).toBe('2');
   expect(manager.title).toBe('Manager');
   expect(manager.email).toBe('dave@company.com');
-  expect(manager.special).toBe('office');
+  expect(manager.office).toBe('office');
 });
 
-test('creates bio array object', () => {
+test('creates office array object', () => {
 
   const manager = new Manager('Dave', '2', 'Manager', 'dave@company.com', 'office');
 

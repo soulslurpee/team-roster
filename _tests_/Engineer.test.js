@@ -9,14 +9,12 @@ test('checks for Engineer title', () =>{
   expect(engineer.id).toBe('2');
   expect(engineer.title).toBe('Engineer');
   expect(engineer.email).toBe('dave@company.com');
-  expect(engineer.special).toBe('username');
+  expect(engineer.github).toBe('username');
 });
 
-test('creates bio array object', () => {
+test('adds github to bio object', () => {
 
   const engineer = new Engineer('Dave', '2', 'Engineer', 'dave@company.com', 'username');
 
-  expect(engineer.getBio()).toEqual(expect.any(Object));
-
-  console.log(engineer.getBio());
+  expect(engineer.bio).toBe(expect.expect.arrayContaining(Object));
 });
