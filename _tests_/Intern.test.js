@@ -1,7 +1,22 @@
 const Intern = require('../lib/Intern.js');
 const { TestWatcher } = require('jest');
 
-test('checks for Intern title', () =>{
-  const intern = new Intern('Dave', 'Intern', 'dave@company.com');
-  expect(intern.school);
+test('checks for intern title', () =>{
+
+  const intern = new Intern('Dave', '2', 'Intern', 'dave@company.com', 'username');
+
+  expect(intern.name).toBe('Dave');
+  expect(intern.id).toBe('2');
+  expect(intern.title).toBe('Intern');
+  expect(intern.email).toBe('dave@company.com');
+  expect(intern.special).toBe('username');
+});
+
+test('creates bio array object', () => {
+
+  const intern = new Intern('Dave', '2', 'Intern', 'dave@company.com', 'username');
+
+  expect(intern.getBio()).toEqual(expect.any(Object));
+
+  console.log(intern.getBio());
 });

@@ -1,7 +1,22 @@
-const Manager = require('../lib/Manager.js');
+const Manager = require('../lib/manager.js');
 const { TestWatcher } = require('jest');
 
-test('checks for Manager title', () =>{
-  const manager = new Manager('Dave', 'Manager', 'dave@company.com');
-  expect(manager.office);
+test('checks for manager title', () =>{
+
+  const manager = new Manager('Dave', '2', 'Manager', 'dave@company.com', 'username');
+
+  expect(manager.name).toBe('Dave');
+  expect(manager.id).toBe('2');
+  expect(manager.title).toBe('Manager');
+  expect(manager.email).toBe('dave@company.com');
+  expect(manager.special).toBe('username');
+});
+
+test('creates bio array object', () => {
+
+  const manager = new Manager('Dave', '2', 'Manager', 'dave@company.com', 'username');
+
+  expect(manager.getBio()).toEqual(expect.any(Object));
+
+  console.log(manager.getBio());
 });
