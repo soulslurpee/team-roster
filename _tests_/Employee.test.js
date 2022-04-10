@@ -2,20 +2,11 @@ const { TestWatcher } = require('jest');
 const Employee = require('../lib/Employee.js');
 
 test('creates an employee object', () => {
-  const employee = new Employee('Dave', '2', 'employee', 'dave@company.com', 'special thing');
+  const employee = new Employee('Dave', 'Engineer', '69', 'dave@company.com', 'GittyHubber');
 
   expect(employee.name).toBe('Dave');
-  expect(employee.id).toBe('2');
-  expect(employee.title).toBe('employee');
+  expect(employee.id).toBe('69');
+  expect(employee.title).toBe('Engineer');
   expect(employee.email).toBe('dave@company.com');
-  expect(employee.special).toBe('special thing');
-});
-
-test('creates bio array object', () => {
-
-  const employee = new Employee('Dave', '2', 'employee', 'dave@company.com', 'username');
-
-  expect(employee.getBio()).toEqual(expect.any(Object));
-
-  console.log(employee.getBio());
+  expect(employee.special).toBe('GittyHubber');
 });
