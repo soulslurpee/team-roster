@@ -1,4 +1,3 @@
-const { TestWatcher } = require('jest');
 const Employee = require('../lib/Employee.js');
 
 test('creates an employee object', () => {

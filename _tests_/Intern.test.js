@@ -1,4 +1,3 @@
-const { TestWatcher } = require('jest');
 const Intern = require('../lib/Intern.js');
 
 test('creates an intern object', () => {
